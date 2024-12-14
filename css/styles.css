@@ -264,7 +264,7 @@ transform: rotate(-180deg);
 }
 
 .most-popular::after {
-right: -8px; 
+right: -7px; 
 transform: rotate(270deg); 
 }
 
