@@ -1,0 +1,270 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fefefe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  width: 462px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 35px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 603px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+  color: #ff6584;
+  margin-bottom: 0 10px;
+ 
+}
+
+.card {
+  border: 2px solid rgba(200, 200, 200, 1);
+  padding: 20px;
+  margin-bottom: 25px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 341px;
+}
+
+.card.active {
+  background-color: #FFF9FA;
+  border: 2px solid #ff6584;
+}
+
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header .radio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #aaa;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+.radio.checked {
+border-color: #ff6584; 
+}
+
+.radio.checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff6584;
+}
+
+.card-header h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-left: 10px;
+}
+
+.discount {
+  font-size: 12px;
+  color: #ffffff;
+  background: #ff6584;
+  padding: 2px 6px;
+  font-weight: 500;
+  margin-left:5px;
+}
+
+.price {
+  text-align: right;
+}
+
+.price .current {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+.price del {
+  font-size: 12px;
+  color: rgba(200, 200, 200, 1);
+  margin-left: 5px;
+}
+
+
+
+.card .details {
+display: none; 
+}
+
+.card.active .details {
+display: grid; 
+grid-template-columns:39px 77px 100px;
+gap: 5px;
+align-items: center;
+margin-top: 10px;
+}
+
+.dropdown {
+padding: 5px;
+font-size: 10.85px;
+border: 1px solid #ccc;
+border-radius: 2.5px;
+width: 72.3px;
+height: 25.3px;
+}
+
+.label {
+font-size: 9px;
+text-align: end;
+}
+
+
+
+.summary {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+.summary-text {
+        padding: 0;
+    }
+    
+    .flex-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 341px;
+    }
+
+    .free-delivery {
+        text-align: left;
+        font-size: 14px;
+    }
+
+
+.button {
+  background: #ff6584;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 20px;
+  font-size: 12px;
+  width: 342px;
+}
+
+.button:hover {
+  background: #ff476a;
+}
+.free-delivery{
+color:#ff476a;
+text-align: left;
+}
+.line {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 341px;
+        margin-bottom: 25px;
+    }
+    
+    .line::before,
+    .line::after {
+        content: '';
+        flex-grow: 1;
+        border-top: 2px solid rgba(200, 200, 200, 1);
+    }
+    .quote{
+        font-size: 12px;
+        color:#aaa;
+        text-align: right;
+        width: 341px;
+        margin-top:3px;
+    }
+.header{
+    font-size: 10px;
+}
+.bogo{
+    padding: 0 3px;
+}
+
+.left-content {
+display: flex;             
+align-items: center;                        
+}
+.standard-price {
+margin: 5px 0 0 10px;         
+font-size: 12px;        
+color: #555;          
+}
+.unit-details {
+display: flex;
+flex-direction: column;     
+}
+.most-popular {
+position: absolute;
+top: -11px;
+right: 6.5px;
+background: #ff6584;
+color: white;
+font-size: 12px;
+font-weight: bold;
+padding: 5px 12px;
+border-radius: 0 0 5px 5px;
+z-index: 1;
+overflow: visible; 
+}
+
+.most-popular::before,
+.most-popular::after {
+content: '';
+position: absolute;
+top: 11%; 
+border-style: solid;
+border-width: 8px 8px 0 0; 
+border-color: #D7445B transparent transparent transparent;
+width: 0;
+height: 0;
+}
+
+.most-popular::before {
+left: -8px;
+transform: rotate(-180deg);
+}
+
+.most-popular::after {
+right: -8px; 
+transform: rotate(270deg); 
+}
+
